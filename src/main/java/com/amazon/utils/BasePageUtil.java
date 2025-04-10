@@ -27,11 +27,11 @@ public class BasePageUtil extends HomePage {
     // Type and search "iPhone 13" in the search box
     public void enterProductName() {
         driver.findElement(searchBox).sendKeys("iPhone 13");
-        CommonUtil.sleep(5);
     }
 
     // Get list of suggestions
     public List<WebElement> getSuggestions() {
+    	waitForElementVisible(suggestionList);
         return driver.findElements(suggestionList);
     }
 
@@ -50,7 +50,7 @@ public class BasePageUtil extends HomePage {
     public void typeAndSearchIphone128GBVariant() {
         driver.findElement(searchBox).clear();
         driver.findElement(searchBox).sendKeys("iPhone 13 128 GB");
-        CommonUtil.sleep(5);
+        waitForElementVisible(iphone128GBLink);
         driver.findElement(iphone128GBLink).click();
     }
 

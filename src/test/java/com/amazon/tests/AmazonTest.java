@@ -10,7 +10,8 @@ import io.qameta.allure.Allure;
 
 public class AmazonTest extends BaseTest {
 
-    @Test (description = "Search iPhone 13 and navigate to Apple Store")
+
+	@Test (description = "Search iPhone 13 and navigate to Apple Store")
     public void testSearchAndBrowseProducts() {
 
         BasePageUtil basePageUtil = new BasePageUtil(driver);

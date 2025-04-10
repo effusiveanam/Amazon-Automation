@@ -32,7 +32,6 @@ public class IphoneProductPageUtil extends IphoneProductPage {
      * Validate that the product page opened in a new tab.
      */
    public void validateNewTabOpened() {
-	   //wait.until(ExpectedConditions.numberOfWindowsToBe(2));
        String originalTab = driver.getWindowHandle();
        for (String handle : driver.getWindowHandles()) {
            if (!handle.equals(originalTab)) {
@@ -53,7 +52,7 @@ public class IphoneProductPageUtil extends IphoneProductPage {
     * Validation for the new tab title.
     */
    public void validateNextTab() {
-       CommonUtil.sleep(4);
+	   waitForElementVisible(appleStoreLink);
        Assert.assertTrue(driver.getTitle().toLowerCase().contains("iphone 13"));
       
    }

@@ -14,12 +14,13 @@ public class AppleStorePageUtil extends AppleStorePage {
 
     // Click on Apple Watch dropdown
     public void clickAppleWatchDropDown() {
+    	waitForElementVisible(appleWatchDropdown);
         driver.findElement(appleWatchDropdown).click();
-        CommonUtil.sleep(3);
     }
 
     // Select Apple Watch SE (GPS + Cellular)
     public void selectAppleWatchSE() {
+    	waitForElementVisible(appleWatchSEOption);
         driver.findElement(appleWatchSEOption).click();
     }
 
@@ -27,11 +28,11 @@ public class AppleStorePageUtil extends AppleStorePage {
     public void hoverOverWatchImage() {
         WebElement watchElement = driver.findElement(watchImage);
         new Actions(driver).moveToElement(watchElement).perform();
-        CommonUtil.sleep(5);
     }
 
     // Check if Quick Look modal is displayed
     public void validateQuickLookModalIsDisplayed() {
+    	waitForElementVisible(quickLookView);
         boolean isQuickLookModalDisplayed = driver.findElement(quickLookView).isDisplayed();
         Assert.assertTrue(isQuickLookModalDisplayed, "Quick Look modal is not displayed");
     }
@@ -39,11 +40,11 @@ public class AppleStorePageUtil extends AppleStorePage {
     // Click on Quick Look modal
     public void clickQuickLookModal() {
         driver.findElement(quickLookView).click();
-        CommonUtil.sleep(5);
     }
 
     // Validate modal opened from Quick Look is for the same product
     public void validateQuickLookNewlyOpenedModalDisplay() {
+    	waitForElementVisible(quickLookModalClickedProduct);
         boolean isModalCorrect = driver.findElement(quickLookModalClickedProduct).isDisplayed();
         Assert.assertTrue(
             isModalCorrect,
