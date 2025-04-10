@@ -1,0 +1,41 @@
+# Java-specific
+*.class
+*.log
+*.jar
+*.war
+*.ear
+
+# Maven
+/target/
+/.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# TestNG output
+/test-output/
+
+# Allure Reports
+/allure-results/
+/.allure/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Logs & temp
+*.log
+*.tmp
+*.bak
+
+# OS files
+ehthumbs.db
+Icon?
